@@ -5,16 +5,14 @@ from VoiceToText import recognize_speech
 from pdfextract import PDFExtract
 from similarity import return_response
 
-pdf_path = "C:\\Users\\sunda\\Downloads\\EEE Textbooks\\AE Syllabus.pdf"#input("Path for the Doc: ")
-#"C:\\Users\\sunda\\Downloads\\EEE Textbooks\\AE Syllabus.pdf" 
+pdf_path = input("Path for the Doc: ")
 
-# Main execution starts here
 if __name__ == "__main__":
     # 1. Record audio
-    #record_audio("query.wav")
+    record_audio("query.wav")
     
     # 2. Reduce noise
-    #reduce_noise("query.wav", "clean_query.wav")
+    reduce_noise("query.wav", "clean_query.wav")
     
     # 3. Recognize speech
     query_text = recognize_speech("clean_query.wav")

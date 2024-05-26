@@ -39,10 +39,5 @@ class PDFExtract:
         df = pd.DataFrame(cleaned_sentences, columns=['Text'])
         return df['Text'].tolist()
 
-if __name__ == "__main__":
-    pdf_path = "C:\\Users\\sunda\\Downloads\\EEE Textbooks\\AE Syllabus.pdf"
-    pdf_extractor = PDFExtract()
-    pdf_text_list = pdf_extractor.process_pdf(pdf_path)
-    for p in pdf_text_list:
-        print(p)
-        print("="*100)
+
+    
