@@ -13,11 +13,6 @@ class PDFExtract:
                 text += page.extract_text()  # Extract text without adding extra spaces
         return text
 
-    def concatenate_text(self, text):
-        # Remove all whitespace characters to concatenate the text without spacing
-        concatenated_text = re.sub(r'\s+', '', text)
-        return concatenated_text
-
     def split_into_sentences(self, text):
         # Split the concatenated text into sentences using periods as delimiters
         sentences = text.split('.')
@@ -33,8 +28,7 @@ class PDFExtract:
 
     def process_pdf(self, pdf_path):
         raw_text = self.extract_text_from_pdf(pdf_path)
-        concatenated_text = self.concatenate_text(raw_text)
-        sentences = self.split_into_sentences(concatenated_text)
+        sentences = self.split_into_sentences(raw_text)
         cleaned_sentences = [self.clean_text(sentence) for sentence in sentences]
         df = pd.DataFrame(cleaned_sentences, columns=['Text'])
         return df['Text'].tolist()

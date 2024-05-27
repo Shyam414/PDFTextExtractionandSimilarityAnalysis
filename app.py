@@ -5,7 +5,8 @@ from VoiceToText import recognize_speech
 from pdfextract import PDFExtract
 from similarity import return_response
 
-pdf_path = input("Path for the Doc: ")
+pdf_path = 'C:\\Users\\sunda\\Downloads\\EEE Textbooks\Main\\plant engineering.pdf'
+#input("Path for the Doc: ")
 
 if __name__ == "__main__":
     # 1. Record audio
