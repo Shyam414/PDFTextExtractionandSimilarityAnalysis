@@ -1,6 +1,7 @@
 
 # PDF Query Voice Assistant
-## Project Link: https://github.com/Shyam414/PDFTextExtractionandSimilarityAnalysis
+## Project Link
+For more details, visit the [project repository](https://github.com/Shyam414/PDFTextExtractionandSimilarityAnalysis).
 
 ## Overview
 
