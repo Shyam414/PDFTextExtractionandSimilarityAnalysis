@@ -69,20 +69,20 @@ record_audio(filename, sample_rate=44100): Records audio and saves it to the spe
 ### Handles noise reduction using the noisereduce and librosa libraries:
 
 reduce_noise(input_file, output_file): Reduces noise in the input audio file and saves the cleaned audio to the output file.
-# VoiceToText.py
-## Handles speech recognition using the speech_recognition library:
+## VoiceToText.py
+### Handles speech recognition using the speech_recognition library:
 
 recognize_speech(audio_file): Converts the audio file to text using Google's speech recognition API.
-# pdfextract.py
-## Handles text extraction and cleaning from a PDF document using PyPDF2 and pandas libraries:
+## pdfextract.py
+### Handles text extraction and cleaning from a PDF document using PyPDF2 and pandas libraries:
 
 extract_text_from_pdf(pdf_path): Extracts raw text from the PDF.<br>
 split_into_sentences(text): Splits the text into sentences.<br>
 clean_text(text): Cleans the text by removing non-alphanumeric characters.<br>
 process_pdf(pdf_path): Processes the PDF to extract and clean text, returning a list of sentences.<br>
 
-# similarity.py
-## Handles similarity matching using cosine similarity:
+## similarity.py
+### Handles similarity matching using cosine similarity:
 
 cosine_similarity(user_question, comments_list): Calculates cosine similarity between the user's query and each comment in the list.<br>
 return_response(query, pdf_text_list): Finds and returns the most relevant response from the PDF text list based on the query.
