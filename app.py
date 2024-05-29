@@ -4,6 +4,7 @@ from noiceReduce import reduce_noise
 from VoiceToText import recognize_speech
 from pdfextract import PDFExtract
 from similarity import return_response
+from model import get_most_relevant_sentences
 
 pdf_path =input("Path for the Doc: ")
 
@@ -22,11 +23,13 @@ if __name__ == "__main__":
     pdf_extractor = PDFExtract()
     pdf_text_list = pdf_extractor.process_pdf(pdf_path)
 
-    # 5. Convert PDF text list to string (if needed)
-    pdf_text_list = [str(comment) for comment in pdf_text_list]
-
-    # 6. Return response
-    relevant_document = return_response(query_text, pdf_text_list)
-    print(relevant_document)
+    # 5. Return response
+    #relevant_document = return_response(query_text, pdf_text_list)
+    #print(relevant_document)
 
 
+    # 6. Get the most relevant sentences to the question
+    relevant_sentences = get_most_relevant_sentences(query_text, pdf_text_list)
+    print("Most relevant sentences:")
+    for sentence in relevant_sentences:
+        print(sentence)
