@@ -1,7 +1,6 @@
 import pandas as pd
 import PyPDF2
 import re
-import nltk
 import contractions  
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
